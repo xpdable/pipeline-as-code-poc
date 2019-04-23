@@ -1,0 +1,63 @@
+{
+    "execution_credential"  : "AWS-xiaopen-Daimler",
+    "iam_role" : "arn:aws-cn:iam::123:role/aws-role-006-1000-r2-master",
+    "region" : "cn-north-1",
+    "version" : "1.0.0",
+    "stackName" : "OAP-QA-LandingZone-Stack",
+    "template" : "OAP-QA-LandingZone-Stack.yaml",
+    "changeSetName" : "OAP-QA-LandingZone-Stack-20190129074843",
+    "changeSetType" : "CREATE",
+    "projectName" : "playbox",
+    "environmentName" : "QA",
+    "executionType" : "execute",
+    "changeSetId" : "arn:aws-cn:cloudformation:cn-north-1:123:changeSet/OAP-QA-LandingZone-Stack-20190129074843/b4e7ad23-7b46-4ca7-a78e-aa755f930d62",
+    "stackId" : "arn:aws-cn:cloudformation:cn-north-1:123:stack/OAP-QA-LandingZone-Stack/4e594600-239a-11e9-ba97-02720274b570",
+    "tag" : "",
+    "parameter" : "",
+    "jiraID" : "DVT-3",
+    "uuid" : "",
+    "actions": [
+        {
+            "stage":"stage-internal-job",
+            "order":1,
+            "type":"job",
+            "source":"Utilities/manual-approval-poc",
+            "parameter":[],
+            "wait":1,
+            "quietPeriod":0
+        },
+        {
+            "stage":"stage2-stage",
+            "order":2,
+            "type":"script",
+            "source":"ls",
+            "parameter":"-li",
+            "wait":1
+        },
+        {
+            "stage":"stage7-stage",
+            "order":2,
+            "type":"job",
+            "source":"Utilities/QualysScan",
+            "parameter":[{"type":"string","name":"version","value":""},{"type":"string","name":"targetIP","value":"10.200.29.231"},{"type":"string","name":"waitreport","value":"ScanAndWaitReport"}],
+            "wait":0
+        },
+        {
+            "stage":"stage4",
+            "order":4,
+            "type":"importSource",
+            "source":"function.groovy",
+            "parameter":"test_importSource",
+            "wait":1
+        },
+        {
+            "stage":"stage5",
+            "order":6,
+            "type":"sharedFunction",
+            "source":"sharedFunctionDemo",
+            "parameter":"test_sharedFunction",
+            "wait":1
+        }
+    ]
+    
+}
