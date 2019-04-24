@@ -67,8 +67,8 @@ Is invoked by Jenkins via webhook, read more about Jenkins Pipeline [here](https
 
 ### Example
 - Series pipeline
-![execution-series-demo.json](https://github.com/xpdable/pipeline-as-code-poc/blob/master/iac/s.jpg)
+![execution-series-demo.json](https://github.com/xpdable/pipeline-as-code-poc/blob/master/imgs/s.jpg)
 - Parallel pipeline
-![execution-parallel.json](https://github.com/xpdable/pipeline-as-code-poc/blob/master/iac/p.jpg)
+![execution-parallel.json](https://github.com/xpdable/pipeline-as-code-poc/blob/master/imgs/p.jpg)
 
   
