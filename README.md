@@ -6,9 +6,9 @@ Jenkinsfile will parse execution.json and generate the pipeline stage dynamicall
 
 ## Execution.json Configuration
 Please refer to example for understanding: 
-- [poc excution](https://git.daimler.com/ITT-China/pac-poc/blob/master/execution.json) 
-- [parallel-stage-example](https://git.daimler.com/ITT-China/pac-poc/blob/master/execution-parallel.json) 
-- [series-style-example](https://git.daimler.com/ITT-China/pac-poc/blob/master/execution-series-demo.json) 
+- [poc excution](https://github.com/xpdable/pipeline-as-code-poc/blob/master/execution.json) 
+- [parallel-stage-example](https://github.com/xpdable/pipeline-as-code-poc/blob/master/execution-parallel.json) 
+- [series-style-example](https://github.com/xpdable/pipeline-as-code-poc/blob/master/execution-series-demo.json) 
 
 ```
  "actions": [
@@ -67,8 +67,8 @@ Is invoked by Jenkins via webhook, read more about Jenkins Pipeline [here](https
 
 ### Example
 - Series pipeline
-![execution-series-demo.json](https://git.daimler.com/ITT-China/pac-poc/blob/master/iac/s.jpg)
+![execution-series-demo.json](https://github.com/xpdable/pipeline-as-code-poc/blob/master/iac/s.jpg)
 - Parallel pipeline
-![execution-parallel.json](https://git.daimler.com/ITT-China/pac-poc/blob/master/iac/p.jpg)
+![execution-parallel.json](https://github.com/xpdable/pipeline-as-code-poc/blob/master/iac/p.jpg)
 
   
